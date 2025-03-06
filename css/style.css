@@ -1,0 +1,514 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+
+  h1{
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  
+
+  h5{
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  p{
+    line-height: 1.5;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  .carousel-item{
+    height: 710px;
+  }
+
+  .carousel-item--menu{
+    background-image: url('../img/menu-header-wallpaper.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .carousel-item--2{
+    background-image: url('../img/hero-carosel-item--2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }  
+
+  .carousel-item--3{
+    background-image: url('../img/hero-carosel-item--3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }  
+
+  .header__sub-text{
+    font-weight: 500;
+  } 
+  
+  .arrow-down{
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .var-theme{
+    color: #fdbe01;
+  }
+
+  .sponsor{
+    text-transform: uppercase;
+  }
+
+  .footer-brand{
+    height: 250px;
+  }
+
+  .footer-link{
+    color: #fff;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.8s;
+  }
+
+  .footer-link:hover{
+    color: #fdbe01;
+    transform: translateX(-1px);
+  }
+
+  .text-white{
+    color: #fff;
+  }
+
+  .text-upper{
+    text-transform: uppercase;
+  }
+
+  .my-nav-link__active{
+  background-color: #fdbe01;
+  }
+
+  .my-nav-link{
+    text-transform: uppercase;
+    color: #fff; 
+  }
+
+  .my-nav-link:hover{
+    color:#fdbe01;
+  }
+
+  .my-btn{
+    background-color: #fdbe01;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 5rem;
+    font-size: 1rem;
+  }
+
+  .hero-icon{
+    color: #fdbe01;
+    margin-left: 0.8rem;
+  }
+
+  .hero-icon-start{
+    margin-left: 0rem;
+  }
+
+  .hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+  }
+  
+  .hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .hero-content-wrap{
+    padding-top: 23%;
+  }
+
+  .hero-brand{
+    height: 16rem;
+  }
+  
+  .sub-text{
+    text-align: left;
+  }
+
+  .event-content{
+    height: 416px;
+    width: 116px;
+    border-radius: 2rem;
+  }
+
+  .event-modal-img{
+    height: 316px;
+    width: 416px;
+    text-align: center;
+  }
+
+  .event-info-sub-title{
+    color: #fdbe01;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+
+  .event-details{
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-left: 1rem;
+    color: #fff;
+  }
+
+  .event-featuring-content{
+    font-weight: 600;
+  }
+
+  .my-bi{
+    color: #fff;
+    margin-right: 0.5rem;
+  }
+
+  .bi-large{
+    font-size: 5rem;
+  }
+
+  .my-bi-event-content{
+    color: #fdbe01;
+  }
+
+  .my-modal-title{
+    color: #fdbe01;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .main-heading{
+    text-transform: uppercase;
+  }
+
+  .header-circle-fill{
+    color: #fdbe01;
+    font-size: 1.5rem;
+  }
+
+  .header-logo{
+    height: 15rem;
+  }
+
+  .event-heading{
+    color: #fdbe01;
+  }
+
+  .event-sub-text{
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .event-content-logo{
+    height: 5rem;
+    margin-right: 1rem;
+  }
+
+  /*Photo collage*/
+  .photo-collage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  .photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .photo img:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Popup Modal Styles */
+  .popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.904);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .quality-sub-text{
+    font-size: 16px;
+  }
+
+  .sub-text-about{
+    text-align: left;
+  }
+
+  .lg-screen-down{
+    display: none;
+  }
+
+  .feature-icon-small{
+    background-color: #fdbe01;
+    color: #fff;
+  }
+
+  .feature-title{
+    text-transform: uppercase;
+  }
+
+  .event-label{
+    margin-right: 0.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .event-info{
+    text-transform: uppercase;
+  }
+
+  .footer{
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .card{
+    border: none;
+  }
+  
+  .dish-side-label{
+    font-weight: 600;
+  }
+
+  .price{
+    font-weight: 600;
+  }
+
+  .heading-logo{
+    height: 5rem;
+    margin-left: 0.8rem;
+  }
+
+  .dashed-line {
+    border: 0;
+    border-top: 2px dashed #ffffff; /* You can change the color and thickness */
+    margin: 20px 0; /* Adjust the spacing */
+  }
+
+  .card-text{
+    color: white;
+  }
+
+  .menu-body{
+    background-image: url('../img/menu-wallpaper.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  /*footer*/
+  
+  
+  /* Media Query for Responsiveness */
+  @media (max-width: 768px) {
+    .photo-collage {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .photo-collage {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media only screen and (max-width: 667px) {
+    .mobile-down{
+        display: none;
+    }
+  }  
+
+  @media only screen and (max-width: 995px) {
+    .map-frame{
+        width: 100%;
+    }
+
+    .marketing{
+      text-align: center;
+    }
+  }
+  
+  @media only screen and (min-width: 996px) and (max-width: 1199px) {
+    .map-frame{
+        width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 374px) and (max-width: 768px) {
+    .carousel-item--1{
+      background-image: url('../img/hero-carosel-item--1__sm.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }  
+  }
+
+  @media screen and (min-width: 374px) and (max-width: 1024px) {
+    .event-label{
+      margin-right: 0.2rem;
+    }
+    .event-poster{
+      margin-bottom: 1rem;
+    }
+    .hero {
+      height: auto;
+    }
+    .hero-content-wrap{
+      padding-top: 5%;
+      padding-bottom: 5%;
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+    .sub-text-about{
+      text-align: center;
+    }
+
+    .hero-social-content{
+      text-align: center ;
+    }
+
+    .hero-social-content-left{
+      text-align: left;
+    }
+
+    .md-screen-down{
+      display: none;
+    }
+
+    .md-screen-show{
+      display: block;
+    }
+
+    .display-4{
+      text-align: center;
+    }
+    .event-content-logo{
+      height: 4rem;
+      margin-right: 0.2rem;
+    }
+
+  }
+
+  @media screen and (min-width: 995px) {
+    .image-dish{
+      height: 150px;
+    }
+  }
+
+
+  @media screen and (min-width: 1024px) {
+    .side-img{
+      width: 420px;
+    }
+  }
+
+  @media screen and (min-width: 767px)  and (max-width: 1023px){
+    .side-img{
+      width: 320px;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    .header__sub-text{
+    padding-right: 17rem;
+    }  
+  }
+
+  @media screen and (min-width: 375px) and (max-width: 766px) {
+    .event-content{
+      width: 351px;
+    }
+
+    .carousel-item{
+      height: 810px;
+    }
+
+    .hero-brand{
+      height: 12rem;
+    }
+
+    .side-img{
+      width: 250px;
+    }
+
+    .md-tab-down{
+      display: none;
+    }
+    .event-heading{
+      font-size: 0.5rem;
+    }
+  }
+
+  @media screen and (max-width: 375px){
+    .photo{
+      height: 354px;
+    }
+  }
+
+  @media screen and (max-width: 525px){
+    .carousel-item--menu{
+      background-image: url('../img/menu-header-wallpaper--sm.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+  }
+
